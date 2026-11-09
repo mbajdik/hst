@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+
+import os
+from pathlib import Path
+
+
+def main():
+    with open("tester.hs", "r", encoding="UTF-8") as r:
+        tester_boilerplate = r.read()
+
+    with open("tester.py", "r", encoding="UTF-8") as r:
+        tester_script = r.read()
+
+    script = "\n".join([
+        "#!/usr/bin/env python3",
+        "TESTER_BOILERPLATE = \"\"\"",
+        tester_boilerplate.replace('\\', '\\\\'),
+        "\"\"\"",
+        tester_script
+    ])
+   
+    script_dir = Path.home() / ".bin"
+    os.makedirs(script_dir, exist_ok=True)
+    with open(script_dir / "hst", "w", encoding="UTF-8") as w:
+        w.write(script)
+
+    os.chmod(script_dir / "hst", 0o754)
+
+
+if __name__ == "__main__":
+    main()
