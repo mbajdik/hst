@@ -6,7 +6,7 @@ To download just the script:
 ```sh
 mkdir .bin
 curl sh.mbajdik.me/hst > .bin/hst
-chmod u+x ./bin/sh
+chmod u+x ./bin/hst
 ```
 
 Or manually download the repository and generate/build it yourself
@@ -25,7 +25,7 @@ Blocks can be started with whatever name - it doesn't need to be the function's 
 # Builtin documentation
 ```
 Haskell tester script
-Usage: {0} [OPTIONS] HS_FILE TEST_FILE
+Usage: hst [OPTIONS] HS_FILE TEST_FILE
 
 OPTIONS:
         --hs    <str>   Sets the Haskell source code file
