@@ -4,9 +4,9 @@ Script used to run a sequence of test cases for functions in a Haskell source fi
 # Installation
 To download just the script:
 ```sh
-mkdir .bin
-curl sh.mbajdik.me/hst > .bin/hst
-chmod u+x ./bin/hst
+mkdir ~/.bin
+curl sh.mbajdik.me/hst > ~/.bin/hst
+chmod u+x ~/.bin/hst
 ```
 
 Or manually download the repository and generate/build it yourself
